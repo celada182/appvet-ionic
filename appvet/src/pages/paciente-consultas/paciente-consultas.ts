@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {App, IonicPage, NavController, NavParams} from 'ionic-angular';
 import {PacientesPage} from "../pacientes/pacientes";
+import {Paciente} from "../../models/paciente";
 
 @IonicPage()
 @Component({
@@ -9,11 +10,14 @@ import {PacientesPage} from "../pacientes/pacientes";
 })
 export class PacienteConsultasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  paciente:Paciente;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private app:App) {
+    this.paciente = this.navParams.data;
   }
 
   onBackToPacientes(){
-    this.navCtrl.setRoot(PacientesPage,{},{
+    this.app.getRootNav().setRoot(PacientesPage,{},{
       animate:true,
       direction:'back'
     });
