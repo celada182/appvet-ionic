@@ -3,6 +3,7 @@ import {AlertController, App, IonicPage, NavController, NavParams} from 'ionic-a
 import {PacientesPage} from "../pacientes/pacientes";
 import {Paciente} from "../../models/paciente";
 import {PacientesService} from "../../services/pacientes.service";
+import {NuevoPacientePage} from "../nuevo-paciente/nuevo-paciente";
 
 @IonicPage()
 @Component({
@@ -26,6 +27,24 @@ export class PacienteDetallesPage {
       animate: true,
       direction: 'back'
     });
+  }
+
+  onEdit() {
+    let confirm = this.alertCtrl.create({
+      title: '¿Editar los datos de este paciente?',
+      buttons: [
+        {
+          text: 'No'
+        },
+        {
+          text: 'Si',
+          handler: () => {
+              this.navCtrl.push(NuevoPacientePage,this.paciente);
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
   onDelete() {

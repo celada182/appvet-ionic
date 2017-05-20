@@ -24,15 +24,23 @@ export class PacientesService {
   }
 
   deleteConsulta(paciente: Paciente, index: number) {
-    paciente.consultas.splice(index,1);
+    paciente.consultas.splice(index, 1);
     this.savePacientes();
   }
 
-  deletePaciente(paciente:Paciente){
+  deletePaciente(paciente: Paciente) {
     const position = this.pacientes.findIndex((p: Paciente) => {
       return p.microchip = paciente.microchip;
     });
-    this.pacientes.splice(position,1);
+    this.pacientes.splice(position, 1);
+    this.savePacientes();
+  }
+
+  updatePaciente(paciente: Paciente) {
+    const position = this.pacientes.findIndex((p: Paciente) => {
+      return p.microchip = paciente.microchip;
+    });
+    this.pacientes[position] = paciente;
     this.savePacientes();
   }
 

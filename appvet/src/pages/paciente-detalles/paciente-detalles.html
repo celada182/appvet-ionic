@@ -8,7 +8,7 @@
     </ion-buttons>
     <ion-title>Detalles {{paciente.nombre}}</ion-title>
     <ion-buttons end>
-      <button ion-button small>
+      <button ion-button small (click)="onEdit()">
         <ion-icon name="create"></ion-icon>
       </button>
     </ion-buttons>

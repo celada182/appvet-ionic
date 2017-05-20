@@ -2,6 +2,11 @@
 
   <ion-navbar>
     <ion-title>Nuevo Paciente</ion-title>
+    <ion-buttons end *ngIf="editar">
+      <button ion-button small (click)="onUpdate()">
+        <ion-icon name="checkbox"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>

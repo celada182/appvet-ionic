@@ -11,14 +11,24 @@ import {PacientesService} from "../../services/pacientes.service";
 export class NuevoPacientePage {
 
   paciente: Paciente;
+  editar:boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private pacientesService: PacientesService) {
-    this.paciente = new Paciente;
+    if(this.navParams.data.hasOwnProperty('nombre')){
+      this.paciente = this.navParams.data;
+      this.editar=true;
+    }else{
+      this.paciente = new Paciente;
+    }
   }
 
   nuevoPaciente() {
-    console.log(this.paciente);
     this.pacientesService.addPaciente(this.paciente);
+    this.navCtrl.pop();
+  }
+
+  onUpdate(){
+    this.pacientesService.updatePaciente(this.paciente);
     this.navCtrl.pop();
   }
 
