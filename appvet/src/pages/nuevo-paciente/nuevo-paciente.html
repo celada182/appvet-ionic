@@ -7,11 +7,50 @@
 </ion-header>
 
 <ion-content padding>
-<form>
-  <ion-item>
-    <ion-label>Username</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <button ion-button full clear>Añadir</button>
-</form>
+  <form (ngSubmit)="nuevoPaciente()">
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="paciente.nombre" name="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Propietario</ion-label>
+      <ion-input type="text" [(ngModel)]="paciente.propietario" name="propietario"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Microchip</ion-label>
+      <ion-input type="number" [(ngModel)]="paciente.microchip" name="microchip"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Especie</ion-label>
+      <ion-input type="text" [(ngModel)]="paciente.especie" name="especie"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nacimiento</ion-label>
+      <ion-datetime [(ngModel)]="paciente.fechaNacimiento" name="fechaNacimiento"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select [(ngModel)]="paciente.sexo" name="sexo">
+        <ion-option value="macho">Macho</ion-option>
+        <ion-option value="hembra">Hembra</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Peso (kg)</ion-label>
+      <ion-input type="number" [(ngModel)]="paciente.peso" name="peso"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Teléfono</ion-label>
+      <ion-input type="tel" [(ngModel)]="paciente.telefono" name="telefono"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dieta</ion-label>
+      <ion-input type="text" [(ngModel)]="paciente.dieta" name="dieta"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Actividad</ion-label>
+      <ion-input type="text" [(ngModel)]="paciente.actividad" name="actividad"></ion-input>
+    </ion-item>
+    <button ion-button full clear type="submit">Añadir</button>
+  </form>
 </ion-content>

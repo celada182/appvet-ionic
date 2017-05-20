@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {Paciente} from "../../models/paciente";
 
 @IonicPage()
 @Component({
@@ -8,11 +9,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NuevoPacientePage {
 
+  paciente: Paciente;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.paciente = new Paciente;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NuevoPacientePage');
+  nuevoPaciente(){
+    console.log(this.paciente);
   }
 
 }
