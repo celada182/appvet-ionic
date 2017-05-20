@@ -1,18 +1,29 @@
-<!--
-  Generated template for the NuevaConsultaPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>nueva-consulta</ion-title>
+    <ion-title>Nueva Consulta</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-
+  <form (ngSubmit)="nuevaConsulta()">
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime [(ngModel)]="consulta.fecha" name="fecha"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Motivo</ion-label>
+      <ion-input type="text" [(ngModel)]="consulta.motivo" name="motivo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Diagnóstico</ion-label>
+      <ion-input type="text" [(ngModel)]="consulta.diagnostico" name="diagnostico"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Observaciones</ion-label>
+      <ion-textarea [(ngModel)]="consulta.observaciones" name="observaciones"></ion-textarea>
+    </ion-item>
+    <button ion-button full clear type="submit">Añadir</button>
+  </form>
 </ion-content>

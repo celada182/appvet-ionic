@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {App, IonicPage, NavController, NavParams} from 'ionic-angular';
 import {PacientesPage} from "../pacientes/pacientes";
 import {Paciente} from "../../models/paciente";
+import {NuevaConsultaPage} from "../nueva-consulta/nueva-consulta";
 
 @IonicPage()
 @Component({
@@ -10,6 +11,7 @@ import {Paciente} from "../../models/paciente";
 })
 export class PacienteConsultasPage {
 
+  nuevaConsultaPage = NuevaConsultaPage;
   paciente:Paciente;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private app:App) {
@@ -21,6 +23,10 @@ export class PacienteConsultasPage {
       animate:true,
       direction:'back'
     });
+  }
+
+  onDelete(){
+
   }
 
 }

@@ -7,11 +7,36 @@
       </button>
     </ion-buttons>
     <ion-title>Consultas {{paciente.nombre}}</ion-title>
+    <ion-buttons end>
+      <button ion-button small [navPush]="nuevaConsultaPage" [navParams]="paciente">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list>
+    <ion-card *ngFor="let consulta of paciente.consultas; let index = index">
+      <ion-card-header>{{consulta.fecha | date:'fullDate'}}</ion-card-header>
+      <ion-card-content>
+        <h3>{{consulta.motivo}}</h3>
+        <p>{{consulta.diagnostico}}</p>
+        <p>{{consulta.observaciones}}</p>
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <button ion-button small icon-only clear>
+            <ion-icon name="create"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col text-right>
+          <button ion-button small icon-only clear (click)="onDelete(index)">
+            <ion-icon name="trash" color="danger"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
 </ion-content>

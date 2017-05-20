@@ -14,5 +14,6 @@ export class Paciente {
 
   constructor(values: Object = {}) {
     Object.assign(this, values);
+    this.consultas = [];
   }
 }

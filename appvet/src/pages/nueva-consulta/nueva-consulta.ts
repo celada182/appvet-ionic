@@ -1,12 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {Consulta} from "../../models/consulta";
+import {PacientesService} from "../../services/pacientes.service";
+import {Paciente} from "../../models/paciente";
 
-/**
- * Generated class for the NuevaConsultaPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-nueva-consulta',
@@ -14,11 +11,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NuevaConsultaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  consulta: Consulta;
+  paciente: Paciente;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private pacientesService: PacientesService) {
+    this.consulta = new Consulta;
+    this.paciente = this.navParams.data;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NuevaConsultaPage');
+  nuevaConsulta() {
+    this.pacientesService.addConsulta(this.paciente, this.consulta);
+    this.navCtrl.pop();
   }
 
 }
