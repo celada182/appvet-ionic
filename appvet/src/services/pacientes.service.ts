@@ -18,16 +18,6 @@ export class PacientesService {
     this.savePacientes();
   }
 
-  addConsulta(paciente: Paciente, consulta: Consulta) {
-    paciente.consultas.push(consulta);
-    this.savePacientes();
-  }
-
-  deleteConsulta(paciente: Paciente, index: number) {
-    paciente.consultas.splice(index, 1);
-    this.savePacientes();
-  }
-
   deletePaciente(paciente: Paciente) {
     const position = this.pacientes.findIndex((p: Paciente) => {
       return p.microchip = paciente.microchip;
@@ -41,6 +31,21 @@ export class PacientesService {
       return p.microchip = paciente.microchip;
     });
     this.pacientes[position] = paciente;
+    this.savePacientes();
+  }
+
+  addConsulta(paciente: Paciente, consulta: Consulta) {
+    paciente.consultas.push(consulta);
+    this.savePacientes();
+  }
+
+  deleteConsulta(paciente: Paciente, index: number) {
+    paciente.consultas.splice(index, 1);
+    this.savePacientes();
+  }
+
+  updateConsulta(paciente:Paciente,consulta:Consulta, index:number){
+    paciente.consultas[index] = consulta;
     this.savePacientes();
   }
 

@@ -8,7 +8,7 @@
     </ion-buttons>
     <ion-title>Consultas {{paciente.nombre}}</ion-title>
     <ion-buttons end>
-      <button ion-button small [navPush]="nuevaConsultaPage" [navParams]="paciente">
+      <button ion-button small [navPush]="nuevaConsultaPage" [navParams]="{paciente:paciente}">
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
@@ -27,7 +27,7 @@
       </ion-card-content>
       <ion-row>
         <ion-col>
-          <button ion-button small icon-only clear>
+          <button ion-button small icon-only clear (click)="onEdit(index)">
             <ion-icon name="create"></ion-icon>
           </button>
         </ion-col>

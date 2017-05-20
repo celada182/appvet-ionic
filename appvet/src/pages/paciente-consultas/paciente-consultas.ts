@@ -48,4 +48,22 @@ export class PacienteConsultasPage {
     confirm.present();
   }
 
+  onEdit(index) {
+    let confirm = this.alertCtrl.create({
+      title: '¿Editar los datos de esta consulta?',
+      buttons: [
+        {
+          text: 'No'
+        },
+        {
+          text: 'Si',
+          handler: () => {
+            this.navCtrl.push(NuevaConsultaPage, {paciente: this.paciente, index: index});
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
 }

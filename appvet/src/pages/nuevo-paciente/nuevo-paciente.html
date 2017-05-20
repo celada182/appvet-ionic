@@ -1,7 +1,8 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Nuevo Paciente</ion-title>
+    <ion-title *ngIf="!editar">Nuevo Paciente</ion-title>
+    <ion-title *ngIf="editar">Editar Paciente</ion-title>
     <ion-buttons end *ngIf="editar">
       <button ion-button small (click)="onUpdate()">
         <ion-icon name="checkbox"></ion-icon>
@@ -60,6 +61,6 @@
       <ion-label>Actividad</ion-label>
       <ion-input type="text" [(ngModel)]="paciente.actividad" name="actividad"></ion-input>
     </ion-item>
-    <button ion-button full clear type="submit">Añadir</button>
+    <button *ngIf="!editar" ion-button full clear type="submit">Añadir</button>
   </form>
 </ion-content>

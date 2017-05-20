@@ -13,14 +13,25 @@ export class NuevaConsultaPage {
 
   consulta: Consulta;
   paciente: Paciente;
+  editar: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private pacientesService: PacientesService) {
-    this.consulta = new Consulta;
-    this.paciente = this.navParams.data;
+    this.paciente = this.navParams.get('paciente');
+    if(typeof this.navParams.get('index') != 'undefined'){
+      this.consulta = this.paciente.consultas[this.navParams.get('index')];
+      this.editar = true;
+    }else{
+      this.consulta = new Consulta;
+    }
   }
 
   nuevaConsulta() {
     this.pacientesService.addConsulta(this.paciente, this.consulta);
+    this.navCtrl.pop();
+  }
+
+  onUpdate(){
+    this.pacientesService.updateConsulta(this.paciente,this.consulta, this.navParams.get('index'));
     this.navCtrl.pop();
   }
 
