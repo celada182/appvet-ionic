@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e58f7f8f-7a30-4077-afa2-ebcb4d5e8edb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appvet/src/models/paciente.ts" afterPath="$PROJECT_DIR$/appvet/src/models/paciente.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appvet/src/pages/nuevo-paciente/nuevo-paciente.html" afterPath="$PROJECT_DIR$/appvet/src/pages/nuevo-paciente/nuevo-paciente.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appvet/src/pages/paciente-consultas/paciente-consultas.ts" afterPath="$PROJECT_DIR$/appvet/src/pages/paciente-consultas/paciente-consultas.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.html" afterPath="$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.ts" afterPath="$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appvet/src/pages/pacientes/pacientes.html" afterPath="$PROJECT_DIR$/appvet/src/pages/pacientes/pacientes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appvet/src/services/pacientes.service.ts" afterPath="$PROJECT_DIR$/appvet/src/services/pacientes.service.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,21 +20,51 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="paciente-detalles.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="paciente-detalles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="60" column="35" lean-forward="false" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+            <state relative-caret-position="833">
+              <caret line="64" column="69" lean-forward="false" selection-start-line="64" selection-start-column="69" selection-end-line="64" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="paciente.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appvet/src/models/paciente.ts">
+      <file leaf-file-name="paciente-detalles.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="204">
+              <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pacientes.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appvet/src/pages/pacientes/pacientes.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pacientes.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appvet/src/services/pacientes.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="paciente-consultas.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appvet/src/pages/paciente-consultas/paciente-consultas.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="47" column="22" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="47" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -60,18 +90,18 @@
         <option value="$PROJECT_DIR$/appvet/src/models/consulta.ts" />
         <option value="$PROJECT_DIR$/appvet/src/pages/pacientes/pacientes.ts" />
         <option value="$PROJECT_DIR$/appvet/src/pages/nuevo-paciente/nuevo-paciente.ts" />
-        <option value="$PROJECT_DIR$/appvet/src/pages/pacientes/pacientes.html" />
         <option value="$PROJECT_DIR$/appvet/src/pages/tabs/tabs.ts" />
         <option value="$PROJECT_DIR$/appvet/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.ts" />
         <option value="$PROJECT_DIR$/appvet/src/pages/nueva-consulta/nueva-consulta.html" />
         <option value="$PROJECT_DIR$/appvet/src/pages/nueva-consulta/nueva-consulta.ts" />
-        <option value="$PROJECT_DIR$/appvet/src/services/pacientes.service.ts" />
         <option value="$PROJECT_DIR$/appvet/src/pages/paciente-consultas/paciente-consultas.html" />
         <option value="$PROJECT_DIR$/appvet/src/pages/paciente-consultas/paciente-consultas.ts" />
         <option value="$PROJECT_DIR$/appvet/src/models/paciente.ts" />
         <option value="$PROJECT_DIR$/appvet/src/pages/nuevo-paciente/nuevo-paciente.html" />
         <option value="$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.html" />
+        <option value="$PROJECT_DIR$/appvet/src/pages/pacientes/pacientes.html" />
+        <option value="$PROJECT_DIR$/appvet/src/services/pacientes.service.ts" />
+        <option value="$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.ts" />
       </list>
     </option>
   </component>
@@ -497,12 +527,12 @@
       <updated>1495286684111</updated>
       <workItem from="1495286685538" duration="409000" />
       <workItem from="1495287139440" duration="3966000" />
-      <workItem from="1495291633154" duration="8399000" />
+      <workItem from="1495291633154" duration="9339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12774000" />
+    <option name="totallyTimeSpent" value="13714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1377" height="744" extended-state="0" />
@@ -585,14 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appvet/src/pages/pacientes/pacientes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="106" lean-forward="false" selection-start-line="17" selection-start-column="106" selection-end-line="17" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appvet/src/pages/pacientes/pacientes.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -618,14 +640,6 @@
           <folding>
             <marker date="1495294720141" expanded="true" signature="352:606" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,24 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appvet/src/pages/paciente-consultas/paciente-consultas.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appvet/src/services/pacientes.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/appvet/src/pages/nuevo-paciente/nuevo-paciente.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -705,10 +701,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/appvet/src/pages/paciente-consultas/paciente-consultas.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="47" column="22" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appvet/src/pages/pacientes/pacientes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="60" column="35" lean-forward="false" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+        <state relative-caret-position="833">
+          <caret line="64" column="69" lean-forward="false" selection-start-line="64" selection-start-column="69" selection-end-line="64" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appvet/src/services/pacientes.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="35" column="25" lean-forward="true" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appvet/src/pages/paciente-detalles/paciente-detalles.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
           <folding />
         </state>
       </provider>

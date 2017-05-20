@@ -28,6 +28,14 @@ export class PacientesService {
     this.savePacientes();
   }
 
+  deletePaciente(paciente:Paciente){
+    const position = this.pacientes.findIndex((p: Paciente) => {
+      return p.microchip = paciente.microchip;
+    });
+    this.pacientes.splice(position,1);
+    this.savePacientes();
+  }
+
   savePacientes() {
     localStorage.setItem('pacientes', JSON.stringify(this.pacientes));
   }

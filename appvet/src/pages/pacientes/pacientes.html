@@ -13,7 +13,6 @@
 
 
 <ion-content padding>
-  <ion-searchbar></ion-searchbar>
   <ion-list>
     <button *ngFor="let paciente of pacientes" ion-item [navPush]="tabsPage" [navParams]="paciente">{{paciente.nombre}}</button>
   </ion-list>
