@@ -7,6 +7,7 @@ export class Paciente {
   especie: string;
   fechaNacimiento: string;
   sexo: string;
+  castrado: boolean;
   peso: number;
   telefono: string;
   dieta: string;

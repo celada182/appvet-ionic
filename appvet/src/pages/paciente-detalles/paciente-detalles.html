@@ -49,6 +49,11 @@
         <ion-col>{{paciente.sexo}}</ion-col>
       </ion-row>
       <ion-row>
+        <ion-col>Castrado</ion-col>
+        <ion-col *ngIf="paciente.castrado">Si</ion-col>
+        <ion-col *ngIf="!paciente.castrado">No</ion-col>
+      </ion-row>
+      <ion-row>
         <ion-col>Teléfono</ion-col>
         <ion-col>{{paciente.telefono}}</ion-col>
       </ion-row>
