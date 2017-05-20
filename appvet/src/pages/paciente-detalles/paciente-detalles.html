@@ -42,11 +42,14 @@
       </ion-row>
       <ion-row>
         <ion-col>Nacimiento</ion-col>
-        <ion-col>{{paciente.fechaNacimiento}}</ion-col>
+        <ion-col>{{paciente.fechaNacimiento | date:'mediumDate'}}</ion-col>
       </ion-row>
       <ion-row>
         <ion-col>Sexo</ion-col>
-        <ion-col>{{paciente.sexo}}</ion-col>
+        <ion-col>
+          <ion-icon *ngIf="paciente.sexo" name="female"></ion-icon>
+          <ion-icon *ngIf="!paciente.sexo" name="male"></ion-icon>
+        </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>Castrado</ion-col>

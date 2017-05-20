@@ -6,7 +6,7 @@ export class Paciente {
   microchip: number;
   especie: string;
   fechaNacimiento: string;
-  sexo: string;
+  sexo: boolean;
   castrado: boolean;
   peso: number;
   telefono: string;
