@@ -10,13 +10,20 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {NuevaConsultaPage} from "../pages/nueva-consulta/nueva-consulta";
+import {NuevoPacientePage} from "../pages/nuevo-paciente/nuevo-paciente";
+import {PacienteConsultasPage} from "../pages/paciente-consultas/paciente-consultas";
+import {PacienteDetallesPage} from "../pages/paciente-detalles/paciente-detalles";
+import {PacientesPage} from "../pages/pacientes/pacientes";
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    NuevaConsultaPage,
+    NuevoPacientePage,
+    PacienteConsultasPage,
+    PacienteDetallesPage,
+    PacientesPage,
     TabsPage
   ],
   imports: [
@@ -26,9 +33,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    NuevaConsultaPage,
+    NuevoPacientePage,
+    PacienteConsultasPage,
+    PacienteDetallesPage,
+    PacientesPage,
     TabsPage
   ],
   providers: [

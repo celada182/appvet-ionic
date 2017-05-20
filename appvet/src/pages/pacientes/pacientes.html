@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Pacientes</ion-title>
+    <ion-buttons end>
+      <button ion-button small [navPush]="nuevoPacientePage">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar></ion-searchbar>
+  <ion-list>
+    <button ion-item [navPush]="tabsPage" >Paciente A</button>
+    <button ion-item [navPush]="tabsPage">Paciente B</button>
+    <button ion-item [navPush]="tabsPage">Paciente C</button>
+  </ion-list>
+</ion-content>
