@@ -5,9 +5,7 @@ var mongoose = require('mongoose');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-
-// Configuration
-mongoose.connect('mongodb://127.0.0.1/appvet');
+mongoose.Promise = global.Promise;
 const port = 8080;
 
 app.use(bodyParser.urlencoded({extended: false})); // Parses urlencoded bodies
@@ -37,7 +35,7 @@ var Paciente = mongoose.model('Paciente', {
 });
 
 app.delete('/api/pacientes/clear', function (req, res) {
-    Paciente.remove({}, function(err) {
+    Paciente.remove({}, function (err) {
         if (err) res.send(err);
         else res.send({msg: 'clear'});
     });
@@ -53,45 +51,32 @@ app.post('/api/pacientes/create', function (req, res) {
     res.send({msg: 'Pacientes guardados'});
 });
 
-/*
-
- app.get('/api/usuarios/read', function (req, res) {
- Usuario.find({}, function (err, usuarios) {
- if (err) {
- res.send(err);
- }
- res.send(usuarios);
- });
- });
-
- app.put('/api/usuarios/update', function (req, res) {
- Usuario.findById(req.body._id, function (err, usuario) {
- if (err) {
- res.status(500).send(err);
- } else {
- usuario.nombre = req.body.nombre || usuario.nombre;
- usuario.email = req.body.email || usuario.email;
- usuario.save(function (err, usuario) {
- if (err) {
- res.status(500).send(err)
- }
- res.send(usuario);
- });
- }
- });
- });
-
- app.delete('/api/usuarios/delete', function (req, res) {
- console.log(req.query);
- Usuario.findByIdAndRemove(req.query._id, function (err, usuario) {
- var response = {
- message: "Usuario borrado",
- _id: usuario._id
- };
- res.send(response);
- });
- });*/
+//Show IP
+var os = require('os');
+var ifaces = os.networkInterfaces();
+Object.keys(ifaces).forEach(function (ifname) {
+    var alias = 0;
+    ifaces[ifname].forEach(function (iface) {
+        if ('IPv4' !== iface.family || iface.internal !== false) {
+            // skip over internal (i.e. 127.0.0.1) and non-ipv4 addresses
+            return;
+        }
+        if (alias >= 1) {
+            // this single interface has multiple ipv4 addresses
+            console.log('Direccion IP: ' + ifname + ':' + alias, iface.address);
+        } else {
+            // this interface has only one ipv4 adress
+            console.log('Direccion IP: ' + ifname, iface.address);
+        }
+        ++alias;
+    });
+});
 
 // listen
-app.listen(port);
-console.log("Server listening on port " + port);
+// Configuration
+mongoose.connect('mongodb://127.0.0.1/appvet').then(function () {
+    app.listen(port);
+    console.log("Servidor listo en el puerto " + port);
+}).catch(function () {
+    console.log('Error de conxión con la base de datos');
+});
