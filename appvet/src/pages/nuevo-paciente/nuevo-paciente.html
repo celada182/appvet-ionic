@@ -15,56 +15,52 @@
 <ion-content padding>
   <form (ngSubmit)="nuevoPaciente()">
     <ion-item>
-      <ion-label>Nombre</ion-label>
+      <ion-label color="dark">Nombre</ion-label>
       <ion-input type="text" [(ngModel)]="paciente.nombre" name="nombre"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Propietario</ion-label>
+      <ion-label color="dark">Propietario</ion-label>
       <ion-input type="text" [(ngModel)]="paciente.propietario" name="propietario"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Dirección</ion-label>
+      <ion-label color="dark">Dirección</ion-label>
       <ion-input type="text" [(ngModel)]="paciente.direccion" name="direccion"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Microchip</ion-label>
+      <ion-label color="dark">Microchip</ion-label>
       <ion-input type="number" [(ngModel)]="paciente.microchip" name="microchip"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Especie</ion-label>
+      <ion-label color="dark">Especie</ion-label>
       <ion-input type="text" [(ngModel)]="paciente.especie" name="especie"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Nacimiento</ion-label>
+      <ion-label color="dark">Nacimiento</ion-label>
       <ion-datetime [(ngModel)]="paciente.fechaNacimiento" name="fechaNacimiento"></ion-datetime>
     </ion-item>
     <ion-item>
-      <ion-label>
-        Sexo
-        <ion-icon name="male"></ion-icon>
-        /
-        <ion-icon name="female"></ion-icon>
+      <ion-label color="dark">Sexo<ion-icon name="male"></ion-icon>/<ion-icon name="female"></ion-icon>
       </ion-label>
       <ion-toggle [(ngModel)]="paciente.sexo" name="sexo"></ion-toggle>
     </ion-item>
     <ion-item>
-      <ion-label>Castrado</ion-label>
+      <ion-label color="dark">Castrado</ion-label>
       <ion-toggle [(ngModel)]="paciente.castrado" name="castrado"></ion-toggle>
     </ion-item>
     <ion-item>
-      <ion-label>Peso (kg)</ion-label>
+      <ion-label color="dark">Peso (kg)</ion-label>
       <ion-input type="number" [(ngModel)]="paciente.peso" name="peso"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Teléfono</ion-label>
+      <ion-label color="dark">Teléfono</ion-label>
       <ion-input type="tel" [(ngModel)]="paciente.telefono" name="telefono"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Dieta</ion-label>
+      <ion-label color="dark">Dieta</ion-label>
       <ion-input type="text" [(ngModel)]="paciente.dieta" name="dieta"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Actividad</ion-label>
+      <ion-label color="dark">Actividad</ion-label>
       <ion-input type="text" [(ngModel)]="paciente.actividad" name="actividad"></ion-input>
     </ion-item>
     <button *ngIf="!editar" ion-button full clear type="submit">Añadir</button>

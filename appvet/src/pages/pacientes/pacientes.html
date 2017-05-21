@@ -1,8 +1,13 @@
 <ion-header>
 
   <ion-navbar>
+    <ion-buttons left>
+      <button ion-button small (click)="onUpload()" >
+        <ion-icon name="cloud-upload"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Pacientes</ion-title>
-    <ion-buttons end>
+    <ion-buttons right>
       <button ion-button small [navPush]="nuevoPacientePage">
         <ion-icon name="add"></ion-icon>
       </button>
@@ -13,7 +18,7 @@
 
 
 <ion-content padding>
-  <ion-list>
-    <button *ngFor="let paciente of pacientes" ion-item [navPush]="tabsPage" [navParams]="paciente">{{paciente.nombre}}</button>
+  <ion-list inset>
+    <button ion-item *ngFor="let paciente of pacientes" [navPush]="tabsPage" [navParams]="paciente">{{paciente.nombre}}</button>
   </ion-list>
 </ion-content>
