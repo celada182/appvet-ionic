@@ -1,0 +1,1 @@
+mongoexport.exe --db appvet --collection pacientes --out backup/appvet.json
