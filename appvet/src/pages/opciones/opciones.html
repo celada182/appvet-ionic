@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Opciones</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <button ion-button block round outline large (click)="onGuardar()">Guardar</button>
+  </ion-item>
+  <ion-item>
+    <button ion-button block round outline large color="secondary" (click)="onCargar()">Cargar</button>
+  </ion-item>
+  <ion-item>
+    <button ion-button block round outline large color="danger" (click)="onEliminar()">Eliminar datos de la App</button>
+  </ion-item>
+</ion-content>

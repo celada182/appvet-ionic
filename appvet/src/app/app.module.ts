@@ -15,6 +15,7 @@ import {PacienteDetallesPage} from "../pages/paciente-detalles/paciente-detalles
 import {PacientesPage} from "../pages/pacientes/pacientes";
 import {PacientesService} from "../services/pacientes.service";
 import {DatabaseService} from "../services/database.service";
+import {OpcionesPage} from "../pages/opciones/opciones";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {DatabaseService} from "../services/database.service";
     PacienteConsultasPage,
     PacienteDetallesPage,
     PacientesPage,
-    TabsPage
+    TabsPage,
+    OpcionesPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import {DatabaseService} from "../services/database.service";
     PacienteConsultasPage,
     PacienteDetallesPage,
     PacientesPage,
-    TabsPage
+    TabsPage,
+    OpcionesPage
   ],
   providers: [
     StatusBar,
