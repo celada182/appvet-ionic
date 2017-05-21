@@ -30,7 +30,8 @@ export class DatabaseService {
     });
   }
 
-  savePacientes(pacientes: Paciente[]) {
+  savePacientes() {
+    let pacientes = JSON.parse(localStorage.getItem('pacientes'));
     return new Promise(resolve => {
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');

@@ -19,7 +19,6 @@ export class TabsPage {
 
   constructor(private navParams: NavParams) {
     this.paciente = this.navParams.data;
-    console.log(this.paciente);
   }
 }
 

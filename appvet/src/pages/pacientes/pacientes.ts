@@ -67,7 +67,7 @@ export class PacientesPage implements OnInit {
   }
 
   onGuardar(data) {
-    this.server_ip = data.ip;
+    /*this.server_ip = data.ip;
     localStorage.setItem('server_ip', data.ip);
     this.server_puerto = data.puerto;
     localStorage.setItem('server_puerto', data.puerto);
@@ -94,7 +94,7 @@ export class PacientesPage implements OnInit {
     }).catch(() => {
       loading.dismiss();
       error.present();
-    });
+    });*/
   }
 
 }

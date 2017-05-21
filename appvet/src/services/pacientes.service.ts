@@ -1,15 +1,18 @@
 import {Paciente} from "../models/paciente";
 import {Consulta} from "../models/consulta";
 export class PacientesService {
-  private pacientes: any = [];
+  private pacientes;
 
   constructor() {
-    if (localStorage.getItem('pacientes')) {
-      this.pacientes = JSON.parse(localStorage.getItem('pacientes'));
-    }
+
   }
 
   getPacientes() {
+    if (localStorage.getItem('pacientes')) {
+      this.pacientes = JSON.parse(localStorage.getItem('pacientes'));
+    } else {
+      this.pacientes = [];
+    }
     return this.pacientes;
   }
 
@@ -44,7 +47,7 @@ export class PacientesService {
     this.savePacientes();
   }
 
-  updateConsulta(paciente:Paciente,consulta:Consulta, index:number){
+  updateConsulta(paciente: Paciente, consulta: Consulta, index: number) {
     paciente.consultas[index] = consulta;
     this.savePacientes();
   }

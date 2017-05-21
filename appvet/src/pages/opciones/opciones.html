@@ -13,12 +13,15 @@
 
 <ion-content padding>
   <ion-item>
-    <button ion-button block round outline large (click)="onGuardar()">Guardar</button>
+    <button ion-button block round outline large (click)="onGuardar()">
+      <ion-icon name="cloud-upload" padding></ion-icon>Guardar</button>
   </ion-item>
   <ion-item>
-    <button ion-button block round outline large color="secondary" (click)="onCargar()">Cargar</button>
+    <button ion-button block round outline large color="secondary" (click)="onCargar()">
+      <ion-icon name="cloud-download" padding></ion-icon>Cargar</button>
   </ion-item>
   <ion-item>
-    <button ion-button block round outline large color="danger" (click)="onEliminar()">Eliminar datos de la App</button>
+    <button ion-button block round outline large color="danger" (click)="onEliminar()">
+      <ion-icon name="trash" padding></ion-icon>Eliminar datos de la App</button>
   </ion-item>
 </ion-content>

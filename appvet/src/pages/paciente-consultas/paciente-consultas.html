@@ -19,7 +19,7 @@
 <ion-content padding>
   <ion-list>
     <ion-card *ngFor="let consulta of paciente.consultas; let index = index">
-      <ion-card-header>{{consulta.fecha | date:'fullDate'}}</ion-card-header>
+      <ion-card-header>{{consulta.fecha | date:'mediumDate'}}</ion-card-header>
       <ion-card-content>
         <h3>{{consulta.motivo}}</h3>
         <p>{{consulta.diagnostico}}</p>
