@@ -1,5 +1,4 @@
 import {Http, Headers} from "@angular/http";
-import {Paciente} from "../models/paciente";
 import 'rxjs/add/operator/map';
 import {Injectable} from "@angular/core";
 
@@ -8,6 +7,7 @@ export class DatabaseService {
   server: string;
   APIcreate: string = '/api/pacientes/create';
   APIclear: string = '/api/pacientes/clear';
+  APIread: string = '/api/pacientes/read';
 
   constructor(public http: Http) {
 
@@ -25,7 +25,7 @@ export class DatabaseService {
         .map(res => res.json())
         .subscribe(
           data => resolve(data),
-          err => reject({error:'error de conexion'})
+          err => reject({error: 'error de conexion'})
         );
     });
   }
@@ -40,6 +40,19 @@ export class DatabaseService {
         .subscribe(data => {
           resolve(data);
         });
+    });
+  }
+
+  loadPacientes() {
+    return new Promise((resolve, reject) => {
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      this.http.get(this.server + this.APIread, {headers: headers})
+        .map(res => res.json())
+        .subscribe(
+          data => resolve(data),
+          err => reject({error: 'error de conexion'})
+        );
     });
   }
 }

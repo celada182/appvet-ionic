@@ -34,6 +34,7 @@ var Paciente = mongoose.model('Paciente', {
     }]
 });
 
+//API
 app.delete('/api/pacientes/clear', function (req, res) {
     Paciente.remove({}, function (err) {
         if (err) res.send(err);
@@ -49,6 +50,15 @@ app.post('/api/pacientes/create', function (req, res) {
         });
     }
     res.send({msg: 'Pacientes guardados'});
+});
+
+app.get('/api/pacientes/read', function (req, res) {
+    Paciente.find({}, function (err, pacientes) {
+        if (err) {
+            res.send(err);
+        }
+        res.send(pacientes);
+    });
 });
 
 //Show IP

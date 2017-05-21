@@ -28,7 +28,9 @@ export class OpcionesPage {
   }
 
   saveServerData(data) {
+    this.server_ip = data.ip;
     localStorage.setItem('server_ip', data.ip);
+    this.server_puerto = data.puerto;
     localStorage.setItem('server_puerto', data.puerto);
   }
 
@@ -115,11 +117,23 @@ export class OpcionesPage {
   }
 
   onCargar() {
-    let toDo = () => {
-      console.log('Cargar datos app');
+    let loading = this.createLoading('Cargando pacientes...');
+    let toDo = (data) => {
+      this.saveServerData(data);
+      let error = this.createErrorAlert();
+      loading.present();
+      this.databaseService.setServer(data.ip, data.puerto);
+      this.databaseService.loadPacientes().then((data) => {
+        localStorage.setItem('pacientes', JSON.stringify(data));
+        loading.dismiss();
+        this.navCtrl.setRoot(PacientesPage);
+      }).catch(() => {
+        loading.dismiss();
+        error.present();
+      });
     };
-    let confirm = this.createConfirm('Cargar', toDo);
-    confirm.present();
+    let prompt = this.createPrompt('Cargar', toDo);
+    prompt.present();
   }
 
   onEliminar() {
