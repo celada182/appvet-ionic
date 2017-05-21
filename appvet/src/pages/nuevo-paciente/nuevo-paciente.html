@@ -39,7 +39,7 @@
       <ion-datetime [(ngModel)]="paciente.fechaNacimiento" name="fechaNacimiento"></ion-datetime>
     </ion-item>
     <ion-item>
-      <ion-label color="dark">Sexo<ion-icon name="male"></ion-icon>/<ion-icon name="female"></ion-icon>
+      <ion-label color="dark">Sexo <ion-icon name="male"></ion-icon> / <ion-icon name="female"></ion-icon>
       </ion-label>
       <ion-toggle [(ngModel)]="paciente.sexo" name="sexo"></ion-toggle>
     </ion-item>
@@ -63,6 +63,6 @@
       <ion-label color="dark">Actividad</ion-label>
       <ion-input type="text" [(ngModel)]="paciente.actividad" name="actividad"></ion-input>
     </ion-item>
-    <button *ngIf="!editar" ion-button full clear type="submit">Añadir</button>
+    <button *ngIf="!editar" ion-button full clear type="submit" [disabled]="!this.paciente.nombre">Añadir</button>
   </form>
 </ion-content>

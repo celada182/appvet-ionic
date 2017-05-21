@@ -97,9 +97,9 @@ export class OpcionesPage {
 
   onGuardar() {
     let loading = this.createLoading('Guardando pacientes...');
-    let error = this.createErrorAlert();
     let toDo = (data) => {
       this.saveServerData(data);
+      let error = this.createErrorAlert();
       loading.present();
       this.databaseService.setServer(data.ip, data.puerto);
       this.databaseService.clearPacientes().then(() => {

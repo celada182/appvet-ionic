@@ -32,4 +32,8 @@ export class NuevoPacientePage {
     this.navCtrl.pop();
   }
 
+  checkForm():boolean{
+    return (this.paciente.nombre == '');
+  }
+
 }

@@ -30,6 +30,6 @@
       <ion-label>Observaciones</ion-label>
       <ion-textarea [(ngModel)]="consulta.observaciones" name="observaciones"></ion-textarea>
     </ion-item>
-    <button *ngIf="!editar" ion-button full clear type="submit">Añadir</button>
+    <button *ngIf="!editar" ion-button full clear type="submit" [disabled]="!this.consulta.motivo">Añadir</button>
   </form>
 </ion-content>
