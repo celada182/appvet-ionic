@@ -23,7 +23,7 @@ export class PacientesService {
 
   deletePaciente(paciente: Paciente) {
     const position = this.pacientes.findIndex((p: Paciente) => {
-      return p.microchip = paciente.microchip;
+      return p.microchip == paciente.microchip;
     });
     this.pacientes.splice(position, 1);
     this.savePacientes();
@@ -31,7 +31,7 @@ export class PacientesService {
 
   updatePaciente(paciente: Paciente) {
     const position = this.pacientes.findIndex((p: Paciente) => {
-      return p.microchip = paciente.microchip;
+      return p.microchip == paciente.microchip;
     });
     this.pacientes[position] = paciente;
     this.savePacientes();
