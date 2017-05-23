@@ -12,16 +12,25 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <button ion-button block round outline large (click)="onGuardar()">
-      <ion-icon name="cloud-upload" padding></ion-icon>Guardar</button>
-  </ion-item>
-  <ion-item>
-    <button ion-button block round outline large color="secondary" (click)="onCargar()">
-      <ion-icon name="cloud-download" padding></ion-icon>Cargar</button>
-  </ion-item>
-  <ion-item>
-    <button ion-button block round outline large color="danger" (click)="onEliminar()">
-      <ion-icon name="trash" padding></ion-icon>Borrar datos App</button>
-  </ion-item>
+  <ion-list no-lines>
+    <ion-item>
+      <button ion-button block round outline large icon-left (click)="onGuardar()">
+        <ion-icon name="cloud-upload"></ion-icon>
+        Guardar
+      </button>
+    </ion-item>
+    <ion-item>
+      <button ion-button block round outline large color="secondary" icon-left (click)="onCargar()">
+        <ion-icon name="cloud-download"></ion-icon>
+        Cargar
+      </button>
+    </ion-item>
+    <ion-item>
+      <button ion-button block round outline large color="danger" icon-left (click)="onEliminar()">
+        <ion-icon name="trash"></ion-icon>
+        Borrar datos App
+      </button>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

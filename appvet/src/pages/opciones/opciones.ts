@@ -101,13 +101,19 @@ export class OpcionesPage {
       this.saveServerData(data);
       let error = this.createErrorAlert();
       loading.present();
+      let timeOut = setTimeout(() => {
+        loading.dismiss();
+        error.present();
+      }, 10000);
       this.databaseService.setServer(data.ip, data.puerto);
       this.databaseService.clearPacientes().then(() => {
         this.databaseService.savePacientes().then(() => {
           loading.dismiss();
+          clearTimeout(timeOut);
           this.navCtrl.setRoot(PacientesPage);
         });
       }).catch(() => {
+        clearTimeout(timeOut);
         loading.dismiss();
         error.present();
       });
@@ -122,12 +128,18 @@ export class OpcionesPage {
       this.saveServerData(data);
       let error = this.createErrorAlert();
       loading.present();
+      let timeOut = setTimeout(() => {
+        loading.dismiss();
+        error.present();
+      }, 10000);
       this.databaseService.setServer(data.ip, data.puerto);
       this.databaseService.loadPacientes().then((data) => {
         localStorage.setItem('pacientes', JSON.stringify(data));
         loading.dismiss();
+        clearTimeout(timeOut);
         this.navCtrl.setRoot(PacientesPage);
       }).catch(() => {
+        clearTimeout(timeOut);
         loading.dismiss();
         error.present();
       });

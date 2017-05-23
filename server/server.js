@@ -43,13 +43,14 @@ app.delete('/api/pacientes/clear', function (req, res) {
 });
 
 app.post('/api/pacientes/create', function (req, res) {
+    var error = false;
     while (req.body.length) {
         var paciente = new Paciente(req.body.pop());
         paciente.save(function (err) {
-            if (err) res.send(err);
+            if (err) error = true;
         });
     }
-    res.send({msg: 'Pacientes guardados'});
+    if (!error) res.send({msg: 'Pacientes guardados'});
 });
 
 app.get('/api/pacientes/read', function (req, res) {
