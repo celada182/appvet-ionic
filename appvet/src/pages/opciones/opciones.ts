@@ -58,7 +58,7 @@ export class OpcionesPage {
         {
           name: 'ip',
           placeholder: 'Dirección IP',
-          type: 'tel',
+          type: 'number',
           value: this.server_ip
         },
         {
